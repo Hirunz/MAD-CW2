@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CW2</string>
+    <string name="ratings">Ratings</string>
+    <string name="search_movies">Search Movies</string>
+    <string name="edit_movies">Edit Movies</string>
+    <string name="favourites">Favourites</string>
+    <string name="display_movies">Display Movies</string>
+    <string name="welcome_to_movieopolis">Welcome to Movieopolis !</string>
+    <string name="register_movie">Register Movie</string>
+</resources>
