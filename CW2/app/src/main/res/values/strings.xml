@@ -7,4 +7,20 @@
     <string name="display_movies">Display Movies</string>
     <string name="welcome_to_movieopolis">Welcome to Movieopolis !</string>
     <string name="register_movie">Register Movie</string>
+    <string name="icon">icon</string>
+    <string name="register_heading1">Register a Movie</string>
+    <string name="register_heading2">Fill all the details below and save</string>
+    <string name="enter_a_movie_name">Enter a movie name</string>
+    <string name="name">Name</string>
+    <string name="enter_movie_release_year">Enter movie release year</string>
+    <string name="year">Year</string>
+    <string name="enter_movie_director">Enter movie director</string>
+    <string name="director">Director</string>
+    <string name="enter_movie_rating_0_10">Enter movie rating 0-10</string>
+    <string name="rating">Rating</string>
+    <string name="enter_a_review">Enter a review</string>
+    <string name="review">Review</string>
+    <string name="enter_actors_seperated_by_commas">Enter actors seperated by commas</string>
+    <string name="list_of_actors">List of Actors</string>
+    <string name="save">Save</string>
 </resources>

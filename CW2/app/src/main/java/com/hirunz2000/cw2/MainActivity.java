@@ -23,12 +23,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSearchClick(View view) {
+        Intent intent = new Intent(this, SearchMovie.class);
+        startActivity(intent);
     }
 
     public void onEditMoviesClick(View view) {
+        Intent intent = new Intent(this, EditMovies.class);
+        startActivity(intent);
     }
 
     public void onFavouritesClick(View view) {
+        Intent intent = new Intent(this, Favourites.class);
+        startActivity(intent);
     }
 
     public void onDisplayClick(View view) {
