@@ -36,7 +36,7 @@
                     app:srcCompat="@drawable/main_img1" />
 
                 <TextView
-                    android:id="@+id/app_name"
+                    android:id="@+id/register_heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -192,7 +192,7 @@
                 app:cardCornerRadius="40dp">
 
                 <Button
-                    android:id="@+id/btn_ratings"
+                    android:id="@+id/register_save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

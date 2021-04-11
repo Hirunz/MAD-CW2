@@ -3,6 +3,7 @@ package com.hirunz2000.cw2;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -31,8 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onDisplayClick(View view) {
+        Intent intent = new Intent(this, DisplayMovies.class);
+        startActivity(intent);
     }
 
     public void onRegisterClick(View view) {
+        Intent intent = new Intent(this, RegisterMovie.class);
+        startActivity(intent);
     }
 }

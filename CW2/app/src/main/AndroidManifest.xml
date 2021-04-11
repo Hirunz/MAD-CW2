@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CW2">
+        <activity android:name=".SearchMovie"></activity>
+        <activity android:name=".ViewMovie" />
+        <activity android:name=".EditMovies" />
+        <activity android:name=".Favourites" />
+        <activity android:name=".DisplayMovies" />
+        <activity android:name=".RegisterMovie" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
