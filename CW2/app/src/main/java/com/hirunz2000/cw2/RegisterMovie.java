@@ -24,12 +24,12 @@ public class RegisterMovie extends AppCompatActivity {
         actionBar.hide();
 
 
-        name = findViewById(R.id.register_name);
-        year = findViewById(R.id.register_year);
-        director = findViewById(R.id.register_director);
+        name = findViewById(R.id.viewMovie_title);
+        year = findViewById(R.id.view_movie_year);
+        director = findViewById(R.id.view_movie_director);
         rating = findViewById(R.id.register_rating);
-        review = findViewById(R.id.register_review);
-        actors = findViewById(R.id.register_actors);
+        review = findViewById(R.id.register_movie_review);
+        actors = findViewById(R.id.view_movie_actors);
     }
 
     public void onSave(View view) {
@@ -41,7 +41,17 @@ public class RegisterMovie extends AppCompatActivity {
                 !review.getText().toString().isEmpty() &&
                 !actors.getText().toString().isEmpty()
         ){
-            Log.d(LOG_TAG, year.getText().toString());
+
+            if (Integer.parseInt(year.getText().toString()) <1895){
+                Toast.makeText(this, "Year must be greater than 1895",Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (Integer.parseInt(rating.getText().toString()) >10 &&
+                    Integer.parseInt(rating.getText().toString()) <1  ){
+                Toast.makeText(this, "Rating must be from 1-10",Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             if (database.addMovie(new Movie(
                     name.getText().toString(),
                     Integer.parseInt(year.getText().toString()),

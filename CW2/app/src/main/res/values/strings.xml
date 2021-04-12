@@ -23,4 +23,5 @@
     <string name="enter_actors_seperated_by_commas">Enter actors seperated by commas</string>
     <string name="list_of_actors">List of Actors</string>
     <string name="save">Save</string>
+    <string name="add_to_favourites">Add to Favourites</string>
 </resources>

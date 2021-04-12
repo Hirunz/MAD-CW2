@@ -20,7 +20,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/display_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
@@ -71,8 +71,19 @@
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/register_movie_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Title"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
-                    android:id="@+id/register_name"
+                    android:id="@+id/viewMovie_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -83,8 +94,19 @@
 
                     android:textSize="18sp" />
 
+                <TextView
+                    android:id="@+id/register_movie_year_heading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Year"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
-                    android:id="@+id/register_year"
+                    android:id="@+id/view_movie_year"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -95,8 +117,19 @@
                     android:maxLength="4"
                     android:textSize="18sp" />
 
+                <TextView
+                    android:id="@+id/register_movie_director_heading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Director"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
-                    android:id="@+id/register_director"
+                    android:id="@+id/view_movie_director"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -106,6 +139,17 @@
                     android:inputType="textPersonName"
 
                     android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/register_movie_ratingText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Rating"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/register_rating"
@@ -120,8 +164,19 @@
 
                     android:textSize="18sp" />
 
+                <TextView
+                    android:id="@+id/register_movie_review_heading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Review"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
-                    android:id="@+id/register_review"
+                    android:id="@+id/register_movie_review"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -133,8 +188,19 @@
 
                     android:textSize="18sp" />
 
+                <TextView
+                    android:id="@+id/register_movie_actors_heading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Actors"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <EditText
-                    android:id="@+id/register_actors"
+                    android:id="@+id/view_movie_actors"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"

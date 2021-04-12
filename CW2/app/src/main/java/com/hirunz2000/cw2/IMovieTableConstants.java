@@ -10,5 +10,6 @@ public interface IMovieTableConstants extends BaseColumns {
     String ACTORS = "actors";
     String REVIEW = "review";
     String RATING = "rating";
+    String FAVOURITE = "favourite";
 
 }

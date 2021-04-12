@@ -3,13 +3,14 @@ package com.hirunz2000.cw2;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Movie {
+public class Movie implements Comparable<Movie> {
     private String title;
     private int year;
     private String director;
     private String actors;
     private int rating;
     private String review;
+    private int favourite;
 
     public Movie(String title, int year, String director, String actors, int rating, String review) {
         this.title = title;
@@ -18,6 +19,17 @@ public class Movie {
         this.actors = actors;
         this.rating = rating;
         this.review = review;
+        favourite =0;
+    }
+
+    public Movie(String title, int year, String director, String actors, int rating, String review, int favourite) {
+        this.title = title;
+        this.year = year;
+        this.director = director;
+        this.actors = actors;
+        this.rating = rating;
+        this.review = review;
+        this.favourite =favourite;
     }
 
     public String getTitle() {
@@ -68,24 +80,30 @@ public class Movie {
         this.review = review;
     }
 
+    public int getFavourite() {
+        return favourite;
+    }
+
+    public void setFavourite(int favourite) {
+        this.favourite = favourite;
+    }
+
     @Override
     public boolean equals(Object o) {
-
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Movie movie = (Movie) o;
         return year == movie.year &&
-                rating == movie.rating &&
-                Objects.equals(title.toLowerCase(), movie.title.toLowerCase()) &&
-                Objects.equals(director.toLowerCase(), movie.director.toLowerCase()) &&
-                Objects.equals(actors.toLowerCase(), movie.actors.toLowerCase()) &&
-                Objects.equals(review.toLowerCase(), movie.review.toLowerCase());
+                Objects.equals(title, movie.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, year, director, actors, rating, review);
+        return Objects.hash(title, year);
     }
+
+
+
 
     @Override
     public String toString() {
@@ -96,6 +114,12 @@ public class Movie {
                 ", actors='" + actors + '\'' +
                 ", rating=" + rating +
                 ", review='" + review + '\'' +
+                ", favourite=" + favourite +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Movie o) {
+        return o.title.compareTo(title);
     }
 }

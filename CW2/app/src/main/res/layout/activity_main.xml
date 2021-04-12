@@ -20,7 +20,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/display_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
@@ -65,16 +65,16 @@
                     android:id="@+id/btn_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onRegisterClick"
                     android:text="@string/register_movie"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onRegisterClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -91,16 +91,16 @@
                     android:id="@+id/btn_display"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onDisplayClick"
                     android:text="@string/display_movies"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onDisplayClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -117,16 +117,16 @@
                     android:id="@+id/btn_favourites"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onFavouritesClick"
                     android:text="@string/favourites"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onFavouritesClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -143,16 +143,16 @@
                     android:id="@+id/btn_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onEditMoviesClick"
                     android:text="@string/edit_movies"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onEditMoviesClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -169,16 +169,16 @@
                     android:id="@+id/btn_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onSearchClick"
                     android:text="@string/search_movies"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onSearchClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -195,16 +195,16 @@
                     android:id="@+id/register_save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:backgroundTint="@color/light_blue"
                     android:fontFamily="@font/noto_sans"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onRatingsClick"
                     android:text="@string/ratings"
                     android:textColor="@color/white"
                     android:textFontWeight="400"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:onClick="onRatingsClick"/>
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
