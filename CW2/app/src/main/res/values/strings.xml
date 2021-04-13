@@ -26,10 +26,13 @@
     <string name="add_to_favourites">Add to Favourites</string>
     <string name="all_the_registered_movies_sorted_alphabetically">All the registered movies sorted alphabetically</string>
     <string name="all_movies">All Movies</string>
-    <string name="ratings">Ratings</string>
     <string name="pick_a_movie_and_click_imdb_button">Pick a movie and click IMDb button</string>
     <string name="image_of_the_movie">image of the movie</string>
     <string name="title">Title</string>
     <string name="rating1">Rating:</string>
     <string name="search_imdb">search IMDb</string>
+    <string name="search">Search</string>
+
+    <string name="enter_a_name_and_click_search">Enter a name and click search</string>
+
 </resources>
