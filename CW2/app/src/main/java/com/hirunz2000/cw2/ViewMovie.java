@@ -40,6 +40,7 @@ public class ViewMovie extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        // get the selected movie from the intent
         Intent intent = getIntent();
         MOVIE_INDEX = intent.getIntExtra(EditMovies.MOVIE_INDEX,-1);
         getMovies();
@@ -55,6 +56,7 @@ public class ViewMovie extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        // iitialise views
                         name = findViewById(R.id.viewMovie_title);
                         year = findViewById(R.id.view_movie_year);
                         director = findViewById(R.id.view_movie_director);
@@ -64,9 +66,11 @@ public class ViewMovie extends AppCompatActivity {
                         fav = findViewById(R.id.edit_checkbox_fav);
                         notFav = findViewById(R.id.edit_checkbox_notFav);
 
+                        // get the selected movie
                         Movie m = movies.get(MOVIE_INDEX);
                         Log.d(LOG_TAG, m.toString());
 
+                        // set the  movie data to edit text views
                         name.setText(m.getTitle());
                         year.setText(String.valueOf(m.getYear()));
                         director.setText(m.getDirector());
@@ -74,7 +78,7 @@ public class ViewMovie extends AppCompatActivity {
                         actors.setText(m.getActors());
 
 
-
+                        // favourite status
                         if (m.getFavourite() ==1){
                             fav.setChecked(true);
                             notFav.setChecked(false);
@@ -83,6 +87,7 @@ public class ViewMovie extends AppCompatActivity {
                             notFav.setChecked(true);
                         }
 
+                        // set the rating in stars
                         setRating(m.getRating());
 
 
@@ -95,6 +100,22 @@ public class ViewMovie extends AppCompatActivity {
 
 
     public void setRating(int rating1){
+        /*
+        * stars array contains the 10 stars imageviews.
+        * if the rating is 6,
+        *   first 6 imageviews in the stars array are  filled stars
+        *   rest are empty stars.
+        *
+        * For rating of 6/10,
+        *   add 6 filled stars and 4 empty stars to stars array.
+        *   add an onclick listener to each imageview
+        *       recurse the set rating method.
+        *
+        * if the previous rating is set to 3 next,
+        *   3rd star onclick method will trigger
+        *       and change the rating ad 3 filled stars and 7 empty stars.
+        *
+        * */
         rating.removeAllViews();
         for (int i = 0; i< rating1; i++){
             LinearLayout.LayoutParams iParams = new LinearLayout.LayoutParams(70,70);
@@ -111,6 +132,7 @@ public class ViewMovie extends AppCompatActivity {
                     setRating(finalI);
                 }
             });
+            // a tag to calculate stars count
 
             image.setTag("1");
 
@@ -135,7 +157,7 @@ public class ViewMovie extends AppCompatActivity {
                     setRating(finalI);
                 }
             });
-
+            // a tag to calculate stars count
             image.setTag("0");
 
             stars[i] = image;
@@ -163,6 +185,7 @@ public class ViewMovie extends AppCompatActivity {
                 favourite=1;
             }
 
+            // get the stars count bt counting the tags
             int starsCount =0;
             for (int i =0; i<stars.length;i++){
                 if(stars[i].getTag().equals("1")){
@@ -172,6 +195,7 @@ public class ViewMovie extends AppCompatActivity {
 
 //            Log.d(LOG_TAG, String.valueOf(starsCount));
 
+            // create a new movie withupdated data
             Movie m =new Movie(
                     name.getText().toString(),
                     Integer.parseInt(year.getText().toString()),
@@ -183,6 +207,11 @@ public class ViewMovie extends AppCompatActivity {
             );
 
             Movie old = movies.get(MOVIE_INDEX);
+            /*
+            * if movie name or year is changed,
+            *   create a new movie and delete the old one
+            * else
+            *   update the movie details*/
             if (movies.contains(m)){
                 database.updateMovie(old.getTitle(), old.getYear(), m);
             }

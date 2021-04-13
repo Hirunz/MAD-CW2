@@ -32,13 +32,13 @@ public class Favourites extends AppCompatActivity {
         setContentView(R.layout.activity_favourites);
 
 
+        // remove action bar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        movies = database.getMovies();
-        if (movies != null){
+
             displayMovies();
-        }
+
     }
 
 

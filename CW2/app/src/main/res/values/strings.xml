@@ -47,5 +47,8 @@
     <string name="not_favourite">Not Favourite</string>
 
     <string name="update">Update</string>
+    <string name="favourite_movies">Favourite Movies</string>
+    <string name="view_and_edit_all_your_favourites">View and edit all your favourites !</string>
+
 
 </resources>
