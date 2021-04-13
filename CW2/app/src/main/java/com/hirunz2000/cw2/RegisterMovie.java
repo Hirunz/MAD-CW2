@@ -48,7 +48,7 @@ public class RegisterMovie extends AppCompatActivity {
                 Toast.makeText(this, "Year must be greater than 1895",Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (Integer.parseInt(rating.getText().toString()) >10 &&
+            if (Integer.parseInt(rating.getText().toString()) >10 ||
                     Integer.parseInt(rating.getText().toString()) <1  ){
                 Toast.makeText(this, "Rating must be from 1-10",Toast.LENGTH_SHORT).show();
                 return;
