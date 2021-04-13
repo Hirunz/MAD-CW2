@@ -20,10 +20,12 @@ public class RegisterMovie extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_movie);
 
+        // remove actionbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
 
+        // initialise edit text views
         name = findViewById(R.id.viewMovie_title);
         year = findViewById(R.id.view_movie_year);
         director = findViewById(R.id.view_movie_director);
@@ -41,7 +43,7 @@ public class RegisterMovie extends AppCompatActivity {
                 !review.getText().toString().isEmpty() &&
                 !actors.getText().toString().isEmpty()
         ){
-
+            // validate inputs
             if (Integer.parseInt(year.getText().toString()) <1895){
                 Toast.makeText(this, "Year must be greater than 1895",Toast.LENGTH_SHORT).show();
                 return;
@@ -52,6 +54,7 @@ public class RegisterMovie extends AppCompatActivity {
                 return;
             }
 
+            // add movie to database
             if (database.addMovie(new Movie(
                     name.getText().toString(),
                     Integer.parseInt(year.getText().toString()),

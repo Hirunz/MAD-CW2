@@ -49,6 +49,12 @@
     <string name="update">Update</string>
     <string name="favourite_movies">Favourite Movies</string>
     <string name="view_and_edit_all_your_favourites">View and edit all your favourites !</string>
+    <string name="title">Title</string>
+    <string name="year">Year</string>
+    <string name="director">Director</string>
+    <string name="rating">Rating</string>
+    <string name="review">Review</string>
+    <string name="actors">Actors</string>
 
 
 </resources>
