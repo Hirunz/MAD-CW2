@@ -120,6 +120,6 @@ public class Movie implements Comparable<Movie> {
 
     @Override
     public int compareTo(Movie o) {
-        return o.title.compareTo(title);
+        return title.toLowerCase().compareTo(o.title.toLowerCase());
     }
 }
