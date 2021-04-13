@@ -44,9 +44,9 @@ public class Ratings extends AppCompatActivity {
     private Database database = new Database(this);
 
     // api URLs
-    private static final String  SEARCH_TITLE ="https://imdb-api.com/en/API/SearchTitle/k_93p25plv/";
-    private static final String  GET_USER_RATINGS ="https://imdb-api.com/en/API/UserRatings/k_93p25plv/";
-    private static final String  GET_RATINGS ="https://imdb-api.com/en/API/Ratings/k_93p25plv/";
+    private static final String  SEARCH_TITLE ="https://imdb-api.com/en/API/SearchTitle/k_o548umw0/";
+    private static final String  GET_USER_RATINGS ="https://imdb-api.com/en/API/UserRatings/k_o548umw0/";
+    private static final String  GET_RATINGS ="https://imdb-api.com/en/API/Ratings/k_o548umw0/";
 
     // variables to store movie data
     private String movie_title;
