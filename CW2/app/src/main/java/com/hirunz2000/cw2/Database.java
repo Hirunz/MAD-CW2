@@ -135,7 +135,7 @@ public class Database extends SQLiteOpenHelper {
 
     public void deleteMovie(Movie movie) {
         SQLiteDatabase db=this.getWritableDatabase();
-        db.delete(TABLE_NAME, " _ID = ? ", new String[]{movie.getTitle()});
+        db.delete(TABLE_NAME, " TITLE = ? AND YEAR = ? ", new String[]{movie.getTitle(), String.valueOf(movie.getYear())});
     }
 
 

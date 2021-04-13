@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ViewMovie extends AppCompatActivity {
 
@@ -50,6 +51,7 @@ public class ViewMovie extends AppCompatActivity {
             @Override
             public void run() {
                 movies = database.getMovies();
+                Collections.sort(movies);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -180,11 +182,12 @@ public class ViewMovie extends AppCompatActivity {
                     favourite
             );
 
+            Movie old = movies.get(MOVIE_INDEX);
             if (movies.contains(m)){
-                Movie old = movies.get(MOVIE_INDEX);
                 database.updateMovie(old.getTitle(), old.getYear(), m);
             }
             else{
+                database.deleteMovie(old);
                 database.addMovie(m);
 
             }

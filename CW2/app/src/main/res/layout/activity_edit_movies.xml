@@ -34,7 +34,8 @@
                     android:layout_height="78dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="8dp"
-                    app:srcCompat="@drawable/edit_movie" />
+                    app:srcCompat="@drawable/edit_movie"
+                    android:contentDescription="@string/icon" />
 
                 <TextView
                     android:id="@+id/register_heading"
@@ -44,7 +45,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/noto_sans"
                     android:gravity="center_horizontal"
-                    android:text="Edit Movies"
+                    android:text="@string/edit_movies"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -57,7 +58,7 @@
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/noto_sans"
                     android:gravity="center_horizontal"
-                    android:text="Select a movie to edit"
+                    android:text="@string/select_a_movie_to_edit"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -68,7 +69,7 @@
                 android:id="@+id/edit_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical" />
 
         </LinearLayout>
     </ScrollView>

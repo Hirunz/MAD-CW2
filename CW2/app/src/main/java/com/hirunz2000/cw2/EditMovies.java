@@ -51,10 +51,12 @@ public class EditMovies extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        // prevent app crash when there are no movies
                         if (movies == null || movies.isEmpty()){
                             Toast.makeText(getApplicationContext(),"No Movies Available !", Toast.LENGTH_SHORT).show();
                             return;
                         }
+                        // display all the movies
                         for (Movie m: movies){
                             CardView.LayoutParams cardParams = new  CardView.LayoutParams(CardView.LayoutParams.MATCH_PARENT, CardView.LayoutParams.MATCH_PARENT);
                             cardParams.setMargins(120,0,120,25);
@@ -63,7 +65,6 @@ public class EditMovies extends AppCompatActivity {
                             card.setLayoutParams(cardParams);
                             card.setRadius(20);
                             card.setCardElevation(8);
-
 
 
                             LinearLayout.LayoutParams tParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -77,7 +78,7 @@ public class EditMovies extends AppCompatActivity {
                             tv.setTextSize(20);
                             tv.setTextColor(Color.parseColor("#000814"));
 
-
+                            // font
                             Typeface tf = ResourcesCompat.getFont(getApplicationContext(), R.font.noto_sans);
                             tv.setTypeface(tf);
                             tv.setGravity(Gravity.CENTER);
