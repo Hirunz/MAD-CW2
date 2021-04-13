@@ -88,6 +88,11 @@ public class Movie implements Comparable<Movie> {
         this.favourite = favourite;
     }
 
+    // compare 2 movies
+    // if 2 movies are equal,
+    //      title and year of both movies must be equal.
+    // (there are same movie with different production year)
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -118,6 +123,7 @@ public class Movie implements Comparable<Movie> {
                 '}';
     }
 
+    // alphabetical sort
     @Override
     public int compareTo(Movie o) {
         return title.toLowerCase().compareTo(o.title.toLowerCase());

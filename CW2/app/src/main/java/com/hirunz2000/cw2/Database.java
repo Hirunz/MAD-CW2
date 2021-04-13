@@ -57,6 +57,7 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    // add a movie
     public boolean addMovie(Movie movie){
 
         ArrayList<Movie> movies = getMovies();
@@ -83,6 +84,7 @@ public class Database extends SQLiteOpenHelper {
         return true;
     }
 
+    // update a movie
     public void updateMovie(String title, int year, Movie movie) {
 
         SQLiteDatabase db=this.getWritableDatabase();
@@ -101,6 +103,7 @@ public class Database extends SQLiteOpenHelper {
         );
     }
 
+    // update only favourite
     public void updateFavourite(Movie movie, int favourite) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values=new ContentValues();
@@ -111,6 +114,7 @@ public class Database extends SQLiteOpenHelper {
         );
     }
 
+    // get all movies
     public ArrayList<Movie> getMovies(){
         ArrayList<Movie> movies = new ArrayList<>();
 
@@ -132,7 +136,7 @@ public class Database extends SQLiteOpenHelper {
         return movies;
     }
 
-
+    // delete a movie
     public void deleteMovie(Movie movie) {
         SQLiteDatabase db=this.getWritableDatabase();
         db.delete(TABLE_NAME, " TITLE = ? AND YEAR = ? ", new String[]{movie.getTitle(), String.valueOf(movie.getYear())});
