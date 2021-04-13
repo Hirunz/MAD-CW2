@@ -3,6 +3,7 @@ package com.hirunz2000.cw2;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.graphics.Color;
@@ -101,7 +102,9 @@ public class Favourites extends AppCompatActivity {
                             image.setPadding(10,10,10,10);
 
 
-
+                            // background tint
+                            image.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(),R.color.light_blue));
+                            image.setImageTintList(ContextCompat.getColorStateList(getApplicationContext(),R.color.light_blue));
 
                             if (m.getFavourite()==1){
                                 image.setImageResource(R.drawable.check);

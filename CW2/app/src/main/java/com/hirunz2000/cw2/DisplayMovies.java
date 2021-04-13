@@ -42,27 +42,21 @@ public class DisplayMovies extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_movies);
 
+        // remove actionbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
         displayMovies();
     }
 
-    public void onItemClick(View view) {
-        ImageView i= (ImageView) view;
-        if(i.getDrawable() == getDrawable(R.drawable.check)){
-            i.setImageResource(R.drawable.checkbox_unchecked);
-        }
-        if(i.getDrawable() == getDrawable(R.drawable.checkbox_unchecked)){
-            i.setImageResource(R.drawable.check);
-        }
-    }
+
 
     public void displayMovies(){
         new Thread(new Runnable() {
             @Override
             public void run() {
                 movies = database.getMovies();
+                // sort movies in alphabetical order
                 Collections.sort(movies);
 
                 runOnUiThread(new Runnable() {
@@ -112,7 +106,7 @@ public class DisplayMovies extends AppCompatActivity {
                             image.setBackgroundResource(R.drawable.checkbox_bg);
                             image.setPadding(10,10,10,10);
 
-
+                            // // background tint
                             image.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(),R.color.light_blue));
                             image.setImageTintList(ContextCompat.getColorStateList(getApplicationContext(),R.color.light_blue));
 
@@ -122,7 +116,9 @@ public class DisplayMovies extends AppCompatActivity {
                             if (m.getFavourite()==1){
                                 image.setImageResource(R.drawable.check);
                             }
-
+                            // add on click listener to favourite image.
+                            // on click favourite -> remove favourite image
+                            // on click non-favourite -> add favourite image
                             image.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -158,6 +154,7 @@ public class DisplayMovies extends AppCompatActivity {
             @Override
             public void run() {
 
+                // update the favourite statuses in database
                 for (Movie m: movies){
                     database.updateFavourite(m, m.getFavourite());
                 }
